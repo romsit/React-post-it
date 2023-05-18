@@ -19,10 +19,12 @@ export default async function handler(
         })
 
         // check title
-        if (title.length > 300)
+        if (title.length > 300) {
             return res.status(403).json({ message: "Please write a shorter post." })
-        if (title.length === 0)
+        }
+        if (!title.length) {
             return res.status(403).json({ message: "Please do not leave this empty." })
+        }
 
         //Create post
         try {
@@ -34,7 +36,7 @@ export default async function handler(
             })
             res.status(200).json(result)
         } catch (err) {
-            res.status(403).json({err: 'Error has occure whilst making a post.r'})
+            res.status(403).json({ err: 'Error has occure whilst making a post.r' })
         }
     }
 }
