@@ -8,6 +8,7 @@ import toast from "react-hot-toast"
 export default function createPost() {
     const [title, setTitle] = useState("")
     const [isDisabled, setIsDisabled] = useState(false)
+    let toastPostId: string = 'hello'
 
 
     // Create a post
@@ -16,11 +17,12 @@ export default function createPost() {
         {
             onError: (error) => {
                 if (error instanceof AxiosError) {
-                    toast.error(error?.response?.data.message)
-                    setIsDisabled(false)
+                    toast.error(error?.response?.data.message, {id: toastPostId})
                 }
+                setIsDisabled(false)
             },
             onSuccess: (data) => {
+                toast.success('Post has been made 🔥', {id: toastPostId}) 
                 setTitle('')
                 setIsDisabled(false)
             }
@@ -29,6 +31,7 @@ export default function createPost() {
 
     const submitPost = async (e: React.FormEvent) => {
         e.preventDefault()
+        toastPostId = toast.loading("Creating your post",  {id: toastPostId})
         setIsDisabled(true)
         mutate(title)
     }

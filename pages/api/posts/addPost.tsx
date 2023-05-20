@@ -36,7 +36,7 @@ export default async function handler(
             })
             res.status(200).json(result)
         } catch (err) {
-            res.status(403).json({ err: 'Error has occure whilst making a post.r' })
+            res.status(403).json({ err: 'Error has occure whilst making a post.' })
         }
     }
 }
