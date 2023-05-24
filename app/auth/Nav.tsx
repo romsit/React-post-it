@@ -6,7 +6,6 @@ import { authOptions } from '../../pages/api/auth/[...nextauth]'
 
 export default async function Nav() {
     const session:any = await getServerSession(authOptions)
-    console.log(session)
     
     return (
         <nav className='flex justify-between items-center py-8'>
