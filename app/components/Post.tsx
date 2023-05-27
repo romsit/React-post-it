@@ -4,7 +4,6 @@ import Image from "next/image"
 import Link from "next/link"
 
 export default function Post({avatar, name, postTitle, id, comments}){
-    console.log(comments)
     return(
         <div className="bg-white my-8 p-8 rounded-lg">
             <div className="flex items-center gap-2">
