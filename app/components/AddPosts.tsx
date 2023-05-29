@@ -55,7 +55,7 @@ export default function createPost() {
                     className="text-sm bg-teal-600 text-white py-2 p-4 rounded-xl disabled:opacity-25"
                     type="submit"
                 >
-                    Create a post</button>
+                    Create a post</button> 
             </div>
         </form>
     )

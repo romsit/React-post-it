@@ -15,7 +15,6 @@ export default function MyPosts() {
         queryKey: ['auth-posts'],
     })
     if (isLoading) return <h1>Posts are loading..</h1>
-    console.log(data)
     return (
         <div>
             {data?.Post?.map((post) =>
