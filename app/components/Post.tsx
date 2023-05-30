@@ -20,7 +20,7 @@ export default function Post({avatar, name, postTitle, id, comments}){
             </div>
             <div className="flex gap-4 cursor-pointer items-center">
                 <Link href={`/post/${id}`}>
-                    <p className="text-sm font-bold text-gray-700">{comments.length} Comments</p>
+                    <p className="text-sm font-bold text-gray-700">{comments?.length} Comments</p>
                 </Link>
             </div>
         </div>
