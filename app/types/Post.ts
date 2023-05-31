@@ -9,6 +9,7 @@ export type PostType = {
         image: string
     }
     Comment?: {
+        message: ReactNode
         createdAt: string
         id: string
         postId: string
