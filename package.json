@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "vercel-build": "prisma generate && prisma migrate deploy && next build",
+    "prisma:generate": "prisma generate"
   },
   "dependencies": {
     "@next-auth/prisma-adapter": "^1.0.6",
@@ -27,8 +29,6 @@
     "@types/react": "18.2.6",
     "prisma": "^4.13.0",
     "ts-node": "^10.9.1",
-    "typescript": "^5.0.4",
-    "vercel-build": "prisma generate && prisma migrate deploy && next build",
-    "prisma:generate": "prisma generate"
+    "typescript": "^5.0.4"
   }
 }
